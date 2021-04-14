@@ -8,6 +8,7 @@
             <?php
                 session_start();
                 $record2=$_SESSION['Name'];
+                $Supervisor_ID=$_SESSION['Supervisor_ID'];
                 echo"<h1>Welcome $record2 !</h1>";
             ?>
             </nav>
@@ -29,12 +30,13 @@
     <br>
     <div class="container">
         <nav>
-            <a href="employee list.php"><button class="btn">Drivers list</button></a>
-            <a href="Customers list.php"><button class='btn'>Vehicles List</button></a>
-            <a href="Rooms.php"><button class='btn'>View Rooms status</button></a>
-            <a href="Orders.php"><button class="btn">View Orders list</button></a>
-            <a href="Bookings.php"><button class="btn">Bookings list</button></a>
-            <a href="Check out.php"><button class="btn">Check Out</button></a>
+            <a href="view drivers.php"><button class="btn">Drivers list</button></a>
+            <a href="add driver.php"><button class='btn'>Add Driver</button></a>
+            <a href="view vehicles.php"><button class='btn'>Vehicles List</button></a>
+            <a href="add vehicle.php"><button class="btn">Add Vehicle</button></a>
+            <a href="view driver status.php"><button class="btn">View Driver Status</button></a>
+            <a href="delete driver.php"><button class="btn">Delete Driver</button></a>
+            <a href="delete vehicle.php"><button class="btn">Delete Vehicle</button></a>
         </nav>
     </div>
     <div class="footer">

@@ -16,6 +16,7 @@
                 $query=mysqli_query($con,$sql);
                 $row = mysqli_fetch_array($query);
                 $_SESSION['Name'] = $row[0];
+                $_SESSION['Supervisor_ID'] = $Supervisor_ID;
                 header("Location:supervisor page.php?login=success"); 
             }
             $incorrect=1;  

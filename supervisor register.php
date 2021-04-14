@@ -14,6 +14,7 @@
         $row = mysqli_fetch_array($query);
         if($row){   //if data exists
             $_SESSION['Name'] = $Name;
+            $_SESSION['Supervisor_ID'] = $Supervisor_ID;
             $Pass=$row['Password'];
             if($Pass==$Password){
                 header("Location:supervisor page.php?login=success"); 
