@@ -32,9 +32,11 @@
         <nav>
             <a href="view drivers.php"><button class="btn">Drivers list</button></a>
             <a href="add driver.php"><button class='btn'>Add Driver</button></a>
-            <a href="view vehicles.php"><button class='btn'>Vehicles List</button></a>
+            <a href="view vehicles.php"><button class='btn'>View Vehicles Status</button></a>
             <a href="add vehicle.php"><button class="btn">Add Vehicle</button></a>
             <a href="view driver status.php"><button class="btn">View Driver Status</button></a>
+            <a href="assign vehicle.php"><button class="btn">Assign Vehicle</button></a>
+            <a href="remove assignment.php"><button class="btn">Remove Vehicle Assignment</button></a>
             <a href="delete driver.php"><button class="btn">Delete Driver</button></a>
             <a href="delete vehicle.php"><button class="btn">Delete Vehicle</button></a>
         </nav>
