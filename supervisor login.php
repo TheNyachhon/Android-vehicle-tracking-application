@@ -6,24 +6,29 @@
     {
         $Supervisor_ID = $_POST['ID'];
         $Password=$_POST['Pass'];
+        $Name = "Rujin";    
         //$sql="SELECT Supervisor_ID FROM supervisor WHERE Supervisor_ID=$Supervisor_ID";
         $sql="SELECT * FROM supervisor WHERE Supervisor_ID='$Supervisor_ID'";
         $query=mysqli_query($con,$sql);
         $row = mysqli_fetch_array($query);
         if($row){   //if data exists
-            $_SESSION['Supervisor_ID'] = $Supervisor_ID;
             $Pass=$row['Password'];
             if($Pass==$Password){
+                $sql="SELECT Name FROM supervisor WHERE Supervisor_ID='$Supervisor_ID'";
+                $query=mysqli_query($con,$sql);
+                $row = mysqli_fetch_array($query);
+                $_SESSION['Name'] = $row[0];
                 header("Location:supervisor page.php?login=success"); 
-            }else{
-                $incorrect=1;
-            }     
+            }
+            $incorrect=1;  
+        }else{
+            $incorrect=1;
         }
     }
     if($incorrect==1){
         echo "<p class='submitMsg'><b>Incorrect Password/Username or Account Not Found!<b></p>";
+        echo "<br>";
     }
-    echo "<br>";
 ?>
 <h1><center>Supervisor Login</center></h1>
 <!DOCTYPE html>

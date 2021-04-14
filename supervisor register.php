@@ -14,7 +14,7 @@
         $query=mysqli_query($con,$sql);
         $row = mysqli_fetch_array($query);
         if($row){   //if data exists
-            $_SESSION['Supervisor_ID'] = $Supervisor_ID;
+            $_SESSION['Name'] = $Name;
             $Pass=$row['Password'];
             if($Pass==$Password){
                 header("Location:supervisor page.php?login=success"); 
@@ -49,13 +49,13 @@
 </head>
 <body>
     <div class="container">            
-        <form action="supervisor login.php" method="POST">
+        <form action="supervisor register.php" method="POST">
             <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter your ID"  maxlength=12 minlength=12 required>
             <input style="width:250px;" type="password" name="Pass" id="Pass" placeholder="Enter your Password" required>
             <input style="width:250px;" type="text" name="Name" id="Name" placeholder="Enter your Name">
             <input style="width:250px;" type="text" name="Contact" id="Contact" placeholder="Enter your contact number" maxlength=10 minlength=10>
             <textarea name="Address" id="Address" style="width:250px;" rows="5" placeholder="Enter your address"></textarea>
-            <button class="btn">Login</button> 
+            <button class="btn">Register</button> 
             <br>
         </form>
     </div>
