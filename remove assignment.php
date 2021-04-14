@@ -14,33 +14,27 @@
             $query=mysqli_query($con,$sql);
             $row = mysqli_fetch_assoc($query);
             if($row){   //vehicle exists
-                if($row['Status']=='Booked'){
-                    echo "<p class='submitMsg'><b>Vehicle unavailable, already assigned!<b></p>";        
+                if($row['Status']=='Available'){
+                    echo "<p class='submitMsgD'><b>Vehicle already available!<b></p>";        
                 }else{
-                    $sql = "SELECT Driver_ID FROM vehicles_assigned WHERE Driver_ID='$Driver_ID';";
+                    $sql = "DELETE FROM vehicles_assigned WHERE Driver_ID='$Driver_ID' AND Vehicle_No='$Number';";
                     $query = mysqli_query($con,$sql);
-                    if(mysqli_num_rows($query)>0){
-                        echo "<p class='submitMsg'><b>Driver already assigned a vehicle<b></p>"; 
-                    }else{
-                        $sql = "INSERT INTO vehicles_assigned VALUES ('$Number','$Driver_ID');";
+                    $failed=false;
+                    if($query==true){
+                        $sql = "UPDATE vehicles SET Status='Available' WHERE Vehicle_No='$Number';";
                         $query = mysqli_query($con,$sql);
-                        $failed=false;
-                        if($query==true){
-                            $sql = "UPDATE vehicles SET Status='Booked' WHERE Vehicle_No='$Number';";
-                            $query = mysqli_query($con,$sql);
-                            if($query == true){
-                                echo "<p class='submitMsgD'><b>Driver successfully assigned vehicle<b></p>"; 
-                            }else{
-                                $sql = "DELETE FROM vehicles_assigned WHERE Driver_ID='$Driver_ID' AND Vehicle_No='$Number';";
-                                $query = mysqli_query($con,$sql);
-                                $failed=true;
-                            }                     
+                        if($query){
+                            echo "<p class='submitMsgD'><b>Driver is now free!<b></p>"; 
                         }else{
-                            $failed=true; 
+                            $sql = "INSERT INTO vehicles_assigned VALUES('$Number','$Driver_ID');";
+                            $query = mysqli_query($con,$sql);
+                            $failed=true;
                         }
-                        if($failed==true){
-                            echo "<p class='submitMsg'><b>Error in assignment!<b></p>"; 
-                        }
+                    }else{
+                        $failed=true;
+                    }
+                    if($failed==true){
+                        echo "<p class='submitMsg'><b>Error!<b></p>"; 
                     }
                 }
             }else{
@@ -52,7 +46,7 @@
     }
     echo "<br>";
 ?>
-<h1><center>Assign Vehicle</center></h1>
+<h1><center>Remove Assignment</center></h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +58,10 @@
 </head>
 <body>
     <div class="container">            
-        <form action="assign vehicle.php" method="POST">
+        <form action="remove assignment.php" method="POST">
             <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter Driver's ID"  maxlength=12 minlength=12 required>
             <input style="width:250px;" type="text" name="Number" id="Number" placeholder="Enter Vehicle Number" required>           
-            <button class="btn">Assign Driver</button> 
+            <button class="btn">Remove assignment</button> 
             <br>
         </form>
     </div>

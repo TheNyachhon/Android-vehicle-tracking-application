@@ -32,7 +32,7 @@
         <nav>
             <a href="view drivers.php"><button class="btn">View Drivers list</button></a>
             <a href="add driver.php"><button class='btn'>Add Driver</button></a>
-            <a href="view vehicles.php"><button class='btn'>View Vehicles list</button></a>
+            <a href="view vehicles.php"><button class='btn'>View Vehicles status</button></a>
             <a href="add vehicle.php"><button class="btn">Add Vehicle</button></a>
             <a href="view driver status.php"><button class="btn">View Driver Status</button></a>
             <a href="assign vehicle.php"><button class="btn">Assign Vehicle</button></a>
