@@ -12,7 +12,6 @@
              <th><h1>Contact</h1></th>
              <th><h1>Address</h1></th>
              <th><h1>Password</h1></th>
-             <th><h1>Salary</h1></th>
              </tr>";
              while($row = mysqli_fetch_assoc($result))
              {       
