@@ -5,10 +5,7 @@
     if(isset($_POST['ID']))
     {
         $Supervisor_ID = $_POST['ID'];
-        $Name = $_POST['Name'];
         $Password=$_POST['Pass'];
-        $Contact = $_POST['Contact'];
-        $Address = $_POST['Address'];
         //$sql="SELECT Supervisor_ID FROM supervisor WHERE Supervisor_ID=$Supervisor_ID";
         $sql="SELECT * FROM supervisor WHERE Supervisor_ID='$Supervisor_ID'";
         $query=mysqli_query($con,$sql);
@@ -43,9 +40,6 @@
         <form action="supervisor login.php" method="POST">
             <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter your ID"  maxlength=12 minlength=12 required>
             <input style="width:250px;" type="password" name="Pass" id="Pass" placeholder="Enter your Password" required>
-            <input style="width:250px;" type="text" name="Name" id="Name" placeholder="Enter your Name">
-            <input style="width:250px;" type="text" name="Contact" id="Contact" placeholder="Enter your contact number" maxlength=10 minlength=10>
-            <textarea name="Address" id="Address" style="width:250px;" rows="5" placeholder="Enter your address"></textarea>
             <button class="btn">Login</button> 
             <br>
         </form>
