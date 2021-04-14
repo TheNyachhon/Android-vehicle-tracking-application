@@ -46,8 +46,7 @@
             else{
                 echo "<p class='submitMsg'><b>Driver not assigned any vehicle<b></p>";
             }
-        }
-
+        }        
     ?>
     <body>
         <div class="container">

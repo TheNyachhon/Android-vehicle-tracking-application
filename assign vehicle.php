@@ -22,7 +22,7 @@
                     if(mysqli_num_rows($query)>0){
                         echo "<p class='submitMsg'><b>Driver already assigned a vehicle<b></p>"; 
                     }else{
-                        $sql = "INSERT INTO vehicles_assigned VALUES ('$Number','$Driver_ID');";
+                        $sql = "INSERT INTO vehicles_assigned(Vehicle_No,Driver_ID) VALUES ('$Number','$Driver_ID');";
                         $query = mysqli_query($con,$sql);
                         $failed=false;
                         if($query==true){

@@ -26,7 +26,7 @@
             $sql2 = "INSERT INTO supervisor VALUES ('$Supervisor_ID','$Name', '$Contact', '$Address','$Password');";
             $query2=mysqli_query($con,$sql2);
             if($query2 == true){
-                header("Location:supervisor page.php?login=success"); 
+                echo "<p class='submitMsgD'><b>Registration Successful!<b></p>";
             }else{
                 $incorrect=1;
             }     
