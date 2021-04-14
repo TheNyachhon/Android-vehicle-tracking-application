@@ -6,8 +6,6 @@
     {
         $Supervisor_ID = $_POST['ID'];
         $Password=$_POST['Pass'];
-        $Name = "Rujin";    
-        //$sql="SELECT Supervisor_ID FROM supervisor WHERE Supervisor_ID=$Supervisor_ID";
         $sql="SELECT * FROM supervisor WHERE Supervisor_ID='$Supervisor_ID'";
         $query=mysqli_query($con,$sql);
         $row = mysqli_fetch_array($query);

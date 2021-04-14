@@ -9,7 +9,6 @@
         $Password=$_POST['Pass'];
         $Contact = $_POST['Contact'];
         $Address = $_POST['Address'];
-        //$sql="SELECT Supervisor_ID FROM supervisor WHERE Supervisor_ID=$Supervisor_ID";
         $sql="SELECT * FROM supervisor WHERE Supervisor_ID='$Supervisor_ID'";
         $query=mysqli_query($con,$sql);
         $row = mysqli_fetch_array($query);
@@ -22,7 +21,7 @@
                 $incorrect=1;
             }     
         }else{
-            //if customer doesn't exist, new account is created and redirected to customer page
+            //if supervisor doesn't exist, new account is created and redirected to supervisor page
             $sql2 = "INSERT INTO supervisor VALUES ('$Supervisor_ID','$Name', '$Contact', '$Address','$Password');";
             $query2=mysqli_query($con,$sql2);
             if($query2 == true){
