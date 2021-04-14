@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "8567";
-    $dbname = "vehicletracking";       //database name
+    $dbname = "vehicle_tracking";       //database name
     //making an connection
     $con = mysqli_connect($servername,$username,$password,$dbname);
     if(!$con){          //if $con does not return true
