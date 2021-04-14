@@ -16,24 +16,30 @@
             $row = mysqli_fetch_assoc($query);
             if($row){   //vehicle exists
                 if($row['Status']=='Booked'){
-                    echo "<p class='submitMsg'><b>Vehicle already assigned!<b></p>";        
+                    echo "<p class='submitMsg'><b>Vehicle unavailable, already assigned!<b></p>";        
                 }else{
-                    $sql = "INSERT INTO vehicles_assigned VALUES ('$Number','$Driver_ID');";
+                    $sql = "SELECT Driver_ID FROM vehicles_assigned WHERE Driver_ID='$Driver_ID';";
                     $query = mysqli_query($con,$sql);
-                    $failed=false;
-                    if($query==true){
-                        $sql = "UPDATE vehicles SET Status='Booked' WHERE Vehicle_No='$Number';";
-                        $query = mysqli_query($con,$sql);
-                        if($query == true){
-                            echo "<p class='submitMsgD'><b>Driver successfully assigned vehicle<b></p>"; 
-                        }else{
-                            $failed=true;
-                        }                     
+                    if(mysqli_num_rows($query)>0){
+                        echo "<p class='submitMsg'><b>Driver already assigned a vehicle<b></p>"; 
                     }else{
-                        $failed=true; 
-                    }
-                    if($failed==true){
-                        echo "<p class='submitMsg'><b>Error in assignment!<b></p>"; 
+                        $sql = "INSERT INTO vehicles_assigned VALUES ('$Number','$Driver_ID');";
+                        $query = mysqli_query($con,$sql);
+                        $failed=false;
+                        if($query==true){
+                            $sql = "UPDATE vehicles SET Status='Booked' WHERE Vehicle_No='$Number';";
+                            $query = mysqli_query($con,$sql);
+                            if($query == true){
+                                echo "<p class='submitMsgD'><b>Driver successfully assigned vehicle<b></p>"; 
+                            }else{
+                                $failed=true;
+                            }                     
+                        }else{
+                            $failed=true; 
+                        }
+                        if($failed==true){
+                            echo "<p class='submitMsg'><b>Error in assignment!<b></p>"; 
+                        }
                     }
                 }
             }else{
