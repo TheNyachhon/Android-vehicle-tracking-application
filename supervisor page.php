@@ -3,6 +3,7 @@
     <div class="wrapper"><div class="container">
         <body>
             <nav>
+            <img src="img/banner.jpg" alt="banner" style="width:100%;height:50%;">
             <a href="supervisor page.php"><u><h1>Supervisor portal</h1></u></a>
             <a href="home.php?logout=success"><button class="btn2"><p style="text-align:right;">Log out?</p></button></a>
             <?php
@@ -41,8 +42,7 @@
             <a href="add vehicle.php"><button class="btn">Add Vehicle</button></a>
             <a href="delete vehicle.php"><button class="btn">Delete Vehicle</button></a>
             <a href="remove assignment.php"><button class="btn">Remove Vehicle Assignment</button></a>
-            <br>
-            <br>
+            <br><br><br><br>
         </nav>
     </div>
     <div class="footer">
