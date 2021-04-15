@@ -59,7 +59,7 @@
             </form>
         </div>
     </body>
-    Google maps
+    <h1><center>Map</center></h1>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <style>
@@ -77,7 +77,6 @@
     </style>
     <body>
     <div id="map"></div>
-
     <script>
       var customLabel = {
         restaurant: {
@@ -90,8 +89,8 @@
 
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(-33.863276, 151.207977),
-          zoom: 12
+          center: new google.maps.LatLng(12.971565, 79.159716),
+          zoom: 15
         });
         var infoWindow = new google.maps.InfoWindow;
 
