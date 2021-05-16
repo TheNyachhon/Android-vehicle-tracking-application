@@ -5,7 +5,7 @@
             <nav>
             <img src="img/banner.jpg" alt="banner" style="width:100%;height:50%;">
             <a href="supervisor page.php"><u><h1>Supervisor portal</h1></u></a>
-            <a href="home.php?logout=success"><button class="btn2"><p style="text-align:right;">Log out?</p></button></a>
+            <a href="index.php?logout=success"><button class="btn2"><p style="text-align:right;">Log out?</p></button></a>
             <?php
                 session_start();
                 $record2=$_SESSION['Name'];
