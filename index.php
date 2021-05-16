@@ -1,24 +1,30 @@
 <?php
-    // $servername = "localhost";
-    // $username = "root";
-    // $password = "8567";
-    // $dbname = "vehicle_tracking";       //database name
-    // //making an connection
-    // $con = mysqli_connect($servername,$username,$password,$dbname);
-    // if(!$con){          //if $con does not return true
-    //     die("Connection failed due to ".mysqli_connect_error());
-    // }else{
-    //     //echo "Connection successful <br><br>";
-    // }
-    $servername = "sql6.freesqldatabase.com";
-    $username = "sql6412598";
-    $password = "p8xl7mppFZ";
-    $dbname = "sql6412598";       //database name
-    //making an connection
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-    if(!$con){          //if $con does not return true
-        die("Connection failed due to ".mysqli_connect_error());
-    }else{
-    //    echo "Connection successful <br><br>";
-    }
+    include('db_connection.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Vehicle Tracking System</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+        <a href='home.php'><h1>Android Vehicle Tracking System</h1></a>
+            <br>
+            <table width="100%" border="50" cellspacing="0">
+                <tr>
+                    <td><a href="supervisor login.php"><h2>Login</h2></a></td>
+                   <td><a href="supervisor register.php"><h2>Register</h2></a></td>
+                </tr>
+            </table>
+        </div>
+    </header>
+</body>
+<div class="footer">
+    <h4>Copyright 2021 AV Tracking System | All rights reserved.</h4>
+</div>
+</html>

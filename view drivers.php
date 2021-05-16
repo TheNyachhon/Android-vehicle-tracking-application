@@ -1,6 +1,6 @@
 <html>
     <?php 
-        include('index.php');
+        include('db_connection.php');
         include('supervisor page.php');
         $Supervisor_ID=$_SESSION['Supervisor_ID'];
         $result=$con->query("SELECT * FROM drivers WHERE Supervisor_ID=$Supervisor_ID");

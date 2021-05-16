@@ -1,4 +1,4 @@
-<?php include('home.php')?>
+<?php include('index.php')?>
 <?php 
     session_start();
     $incorrect=0;
