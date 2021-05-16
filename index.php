@@ -21,4 +21,6 @@
     }else{
     //    echo "Connection successful <br><br>";
     }
+    header("Location: home.php");
+
 ?>
