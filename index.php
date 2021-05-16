@@ -19,8 +19,6 @@
     if(!$con){          //if $con does not return true
         die("Connection failed due to ".mysqli_connect_error());
     }else{
-        header("Location: home.php");
     //    echo "Connection successful <br><br>";
-       exit();
     }
 ?>
