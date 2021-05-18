@@ -4,11 +4,11 @@
         include('db_connection.php');
         include('supervisor page.php');
         $Supervisor_ID=$_SESSION['Supervisor_ID'];
-        ?>
-        <h1><center>Driver Status</center></h1>
-        <?php
+    ?>
+      <h1><center>Driver Location</center></h1>
+      <?php
         if(isset($_POST['Driver_ID']))
-	    {
+  	    {
             $Driver_ID = $_POST["Driver_ID"];  
             $sql="SELECT * FROM drivers WHERE Driver_ID='$Driver_ID' and Supervisor_ID='$Supervisor_ID'";
             $query = mysqli_query($con,$sql);
@@ -19,6 +19,8 @@
                 $row2 = mysqli_fetch_assoc($query2);
                 echo "<br>";
                 if(mysqli_num_rows($query2)>0){
+                    // echo json_encode($row2);
+                    $tosend = $Driver_ID;
                     echo "<table class='center' border='1' style='float:left;margin: 30px;'>
                     <tr>
                     <th><h1>Driver ID</th>
@@ -39,7 +41,7 @@
                     </tr>";
                     echo "<tr>";
                     echo "<td>" .$row2['Vehicle_No'] . "</td>"; 
-                    echo "</table>";                 
+                    echo "</table>";
                 }else{
                     echo "<p class='submitMsg'><b>Driver not assigned any vehicle<b></p>";
                 }
@@ -48,7 +50,7 @@
                 echo "<p class='submitMsg'><b>Searched Driver Not Found!<b></p>";
             }
         }        
-    ?>
+      ?>
     <body>
         <div class="container">
             <form action="view driver status.php" method="POST">
@@ -77,7 +79,12 @@
     </style>
     <body>
     <div id="map"></div>
-    <script>
+    <!-- script part was here -->
+  </body>
+</html>
+<script type="text/javascript">
+    // alert("Driver ID (tosend is ): " + "<?php echo $tosend; ?>");
+    //deleted from next line
       var customLabel = {
         restaurant: {
           label: 'R'
@@ -86,69 +93,44 @@
           label: 'B'
         }
       };
-
-        function initMap() {
+      var ajax = new XMLHttpRequest();
+        var method = "GET";
+        var url = "view driver status.php";
+        var asynchronous = true;
+        ajax.open(method,url,asynchronous);
+        //sending ajax request
+        ajax.send();
+        //receiving response from mapdata.php
+        var latitude;
+        var longitude;
+        ajax.onreadystatechange = function()
+        {
+          if(this.readyState == 4 && this.status== 200){
+            var obj= <?php echo json_encode($row2); ?>;
+            // alert(typeof(obj));
+            var data = Object.keys(obj).map((key) => [String(key), obj[key]]);
+            console.log(data);
+            latitude=parseFloat(data[2][1]);
+            longitude=parseFloat(data[3][1]);
+            // alert("latitude : "+latitude+" and longitude : "+longitude);
+            // alert(typeof(latitude));
+            // alert(typeof(longitude));
+            initMap();
+          }
+        }
+      function initMap() {
+        // alert("latitude is : "+typeof(latitude));
+        // alert("longitude is : "+typeof(longitude));
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(12.971565, 79.159716),
-          zoom: 15
+            
+        // center: new google.maps.LatLng(12.971565, 79.159716),
+        center: { lat: latitude, lng: longitude },
+        // center: new google.maps.LatLng(latitude, longitude),
+          zoom: 20
         });
         var infoWindow = new google.maps.InfoWindow;
-
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var id = markerElem.getAttribute('id');
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var type = markerElem.getAttribute('type');
-              var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
-
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = address
-              infowincontent.appendChild(text);
-              var icon = customLabel[type] || {};
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                label: icon.label
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
-        }
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
-
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
-
-        request.open('GET', url, true);
-        request.send(null);
       }
-
-      function doNothing() {}
     </script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Irb5-DYgI-ec7P0Sq-EMMZStN45mLfE&callback=initMap">
     </script>
-  </body>
-</html>

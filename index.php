@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="container">
-        <a href='home.php'><h1>Android Vehicle Tracking System</h1></a>
+        <a href='index.php'><h1>Android Vehicle Tracking System</h1></a>
             <br>
             <table width="100%" border="50" cellspacing="0">
                 <tr>
