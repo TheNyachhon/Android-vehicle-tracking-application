@@ -126,10 +126,16 @@
         // center: new google.maps.LatLng(12.971565, 79.159716),
         center: { lat: latitude, lng: longitude },
         // center: new google.maps.LatLng(latitude, longitude),
-          zoom: 20
+          zoom: 18
         });
         var infoWindow = new google.maps.InfoWindow;
-      }
+        var latlng = new google.maps.LatLng(latitude, longitude);
+        var myMarkerOptions = {
+          position: latlng,
+          map: map
+        }
+        var myMarker = new google.maps.Marker(myMarkerOptions);
+        }
     </script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Irb5-DYgI-ec7P0Sq-EMMZStN45mLfE&callback=initMap">
