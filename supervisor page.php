@@ -47,7 +47,7 @@
                 <a href="view driver status.php"><button class="btn" style="width: 210px">View Driver Status</button></a>
                 <a href="add driver.php"><button class='btn' style="width: 150px">Add Driver</button></a>   
                 <a href="delete driver.php"><button class="btn" style="width: 10em">Delete Driver</button></a>
-                <a href="delete driver.php"><button class="btn" style="width: 235px">Change Driver's Password</button></a>
+                <a href="change pass.php"><button class="btn" style="width: 235px">Change Driver's Password</button></a>
                 
             </nav>
             <nav>
