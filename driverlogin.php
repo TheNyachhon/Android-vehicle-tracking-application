@@ -7,10 +7,16 @@
     $query=mysqli_query($con,$sql);
     $row = mysqli_fetch_array($query);
     if($row){   //if data exists
-        $name=$row['Name'];
-        echo "Login Success!";
-        echo "Welcome".$name;
-        
+        $sql="SELECT * FROM vehicles_assigned WHERE Driver_ID='$Driver_ID'";
+        $query=mysqli_query($con,$sql);
+        $row2 = mysqli_fetch_array($query);
+        if($row2){   //if vehicle is assigned to driver
+            $name=$row['Name'];
+            echo "Login Success!";
+            echo "Welcome ".$name."!";
+        }else{
+            echo "Error! You have not been assigned a vehicle!";
+        }  
     }else{  
         echo "Login Failed, Please Try again";
     }
