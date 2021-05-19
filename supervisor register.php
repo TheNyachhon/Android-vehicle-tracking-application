@@ -1,4 +1,4 @@
-<?php include('index.php')?>
+<?php include('header.php')?>
 <?php 
     session_start();
     $incorrect=0;
@@ -37,27 +37,29 @@
     }
     echo "<br>";
 ?>
-<h1><center>Supervisor Register</center></h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AV Tracking System</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>AV tracking System</title>
 </head>
 <body>
-    <div class="container">            
-        <form action="supervisor register.php" method="POST">
-            <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter your ID"  maxlength=12 minlength=12 required>
-            <input style="width:250px;" type="password" name="Pass" id="Pass" placeholder="Enter your Password" required>
-            <input style="width:250px;" type="text" name="Name" id="Name" placeholder="Enter your Name">
-            <input style="width:250px;" type="text" name="Contact" id="Contact" placeholder="Enter your contact number" maxlength=10 minlength=10>
-            <textarea name="Address" id="Address" style="width:250px;" rows="5" placeholder="Enter your address"></textarea>
-            <button class="btn">Register</button> 
-            <br>
-        </form>
+    <div class="wrapper">
+        <div class="container">            
+            <h1>Supervisor Register</h1>
+            <form action="supervisor register.php" method="POST">
+                <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter your ID"  maxlength=12 minlength=12 required>
+                <input style="width:250px;" type="password" name="Pass" id="Pass" placeholder="Enter your Password" required>
+                <input style="width:250px;" type="text" name="Name" id="Name" placeholder="Enter your Name">
+                <input style="width:250px;" type="text" name="Contact" id="Contact" placeholder="Enter your contact number" maxlength=10 minlength=10>
+                <textarea name="Address" id="Address" style="width:250px;" rows="5" placeholder="Enter your address"></textarea>
+                <button class="btn">Register</button> 
+                <br>
+            </form>
+        </div>
     </div>
 </body>
 </html>

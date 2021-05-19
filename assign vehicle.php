@@ -52,9 +52,11 @@
     }
     echo "<br>";
 ?>
-<h1><center>Assign Vehicle</center></h1>
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
+<div class="container">
+    <h1>Assign Vehicle</h1>
+</div>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,8 +64,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">            
+    <div class="container">              
         <form action="assign vehicle.php" method="POST">
             <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter Driver's ID"  maxlength=12 minlength=12 required>
             <input style="width:250px;" type="text" name="Number" id="Number" placeholder="Enter Vehicle Number" required>           

@@ -5,7 +5,9 @@
         include('supervisor page.php');
         $Supervisor_ID=$_SESSION['Supervisor_ID'];
     ?>
-      <h1><center>Driver Location</center></h1>
+      <div class="container">
+        <h1>Driver Location</h1>
+        </div>
       <?php
         if(isset($_POST['Driver_ID']))
   	    {

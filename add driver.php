@@ -27,7 +27,6 @@
     }
     echo "<br>";
 ?>
-<h1><center>Add Driver</center></h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +37,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">            
+    <div class="container"> 
+        <h1>Add Driver</h1>         
         <form action="add driver.php" method="POST">
             <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter Driver's ID"  maxlength=12 minlength=12 required>
             <input style="width:250px;" type="text" name="Name" id="Name" placeholder="Enter Name">

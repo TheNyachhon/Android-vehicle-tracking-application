@@ -4,7 +4,9 @@
         include('supervisor page.php');
         $Supervisor_ID=$_SESSION['Supervisor_ID'];
         ?>
-        <h1><center>Vehicles List</center></h1>
+        <div class="container">
+            <h1>Vehicles List</h1>
+        </div>
         <?php
         $result=$con->query("SELECT * FROM vehicles WHERE Supervisor_ID=$Supervisor_ID");
          if(mysqli_num_rows($result)>0){

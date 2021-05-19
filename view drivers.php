@@ -5,7 +5,11 @@
         $Supervisor_ID=$_SESSION['Supervisor_ID'];
         $result=$con->query("SELECT * FROM drivers WHERE Supervisor_ID=$Supervisor_ID");
     ?>
-    <h1><center>Drivers List</center></h1>
+    <body>
+    <div class="container">
+        <h1>Drivers List</h1>
+    </div>
+    </body>
     <?php
          if(mysqli_num_rows($result)>0){
              echo "<table class='center' border='1'>
