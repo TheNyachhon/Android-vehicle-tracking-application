@@ -196,7 +196,7 @@ form input:hover{
     color:tomato;
 }
 .submitMsg{ 
-    margin-top: 2em;
+    margin: 2em 0;
     text-align: center;
     color: red;
     font-size: 2em;
@@ -224,7 +224,7 @@ table
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    /*row-gap: 200px;*/
+    /*row-gap: 50px;*/
   }
   td {
     width: 15em;

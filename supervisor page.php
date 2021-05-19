@@ -12,7 +12,7 @@
         <div class="wrapper">
             <nav>
                 <div class="logo">
-                    A.
+                    AVTS.
                 </div>
                 <ul class="nav-items">
                     <li style="margin-right:15em;">
@@ -27,7 +27,7 @@
                     </li>
                     <li>
                         <a href="index.php?logout=success">Log Out?</a>
-                        <a class="nav-btn-container" href="#">
+                        <a class="nav-btn-container" href="index.php?logout=success">
                             <img src="img/exit.svg" alt="">
                         </a>  
                     </li>

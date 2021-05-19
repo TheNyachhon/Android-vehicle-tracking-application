@@ -18,7 +18,7 @@
                 <div class="hero-content">
                     <h1>Welcome People!</h1>
                     <p>This is the Android Vehicle Tracking System.</p>
-                    <a href="#">
+                    <a href="contact us.php">
                     Contact Us
                     </a>
                 </div>

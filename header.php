@@ -5,7 +5,7 @@
     <div class="wrapper">
         <nav>
             <div class="logo">
-                A.
+                AVTS.
             </div>
             <ul class="nav-items">
                 <li>
@@ -15,21 +15,21 @@
                     <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a class="nav-btn-container" href="#">
+                    <a class="nav-btn-container" href="supervisor login.php">
                         <img src="img/login.svg" alt="">
                     </a>
                     <a href="supervisor login.php">Login</a>
                     
                 </li>
                 <li>
-                    <a class="nav-btn-container" href="#">
+                    <a class="nav-btn-container" href="supervisor register.php">
                         <img src="img/new.svg" alt="">
                     </a>  
                     <a href="supervisor register.php">Register</a>
                     
                 </li>
                 <li>
-                    <a class="nav-btn-container" href="#help">
+                    <a class="nav-btn-container" href="help.php">
                     <img src="img/help.svg" alt="">
                     </a>
                 </li>
