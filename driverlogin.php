@@ -12,7 +12,7 @@
         $row2 = mysqli_fetch_array($query);
         if($row2){   //if vehicle is assigned to driver
             $name=$row['Name'];
-            echo "Logged IN!!!";
+            echo "Login Successful.";
             echo "Welcome ".$name."!";
         }else{
             echo "Error! You have not been assigned a vehicle!";
