@@ -23,19 +23,19 @@
                     </a>
                 </div>
                 <div class="hero-image">
-                    <img src="img/main-image.svg" alt="">
+                    <img src="img/main-image.svg" alt="google marker img">
                     <div class="photo-bg"></div>
                 </div>
             </header>
             <div class="social-icons">
-                <a href="">
-                    <img src="img/insta.svg" alt="">
+                <a href="https://www.instagram.com/">
+                    <img src="img/insta.svg" alt="instagram img">
                 </a>
-                <a href="">
-                    <img src="img/twitter.svg" alt="">
+                <a href="https://twitter.com/">
+                    <img src="img/twitter.svg" alt="twitter img">
                 </a>
-                <a href="">
-                    <img src="img/fb.svg" alt="">
+                <a href="https://www.facebook.com/">
+                    <img src="img/fb.svg" alt="facebook img">
                 </a>
             </div>
         </div>
