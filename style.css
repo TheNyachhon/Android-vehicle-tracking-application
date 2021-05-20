@@ -114,10 +114,17 @@ header a:hover{
     position: fixed;
     display: flex;
     align-items: center;
-    
 }
 .social-icons a{
     margin:0 2em;
+}
+.social-icons a:hover{
+    transform: scale(1.15);
+    transition:0.5s;
+}
+.social-icons .torotate:hover{
+    transform: rotate(360deg);
+    transition:1s
 }
 .social-icons a:nth :nth-of-type(1){
     margin-left:0;

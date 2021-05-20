@@ -24,12 +24,16 @@
                 <a href="https://vit.ac.in/" target='_blank'>
                     <img src="img/vit-logo.svg" alt="vit img" style="width:12em;">
                 </a>
+                <div class="torotate">
                 <a href="https://twitter.com/VIT_univ" target='_blank'>
                     <img src="img/twitter.svg" alt="twitter img">
                 </a>
+                </div>
+                <div class="torotate">
                 <a href="https://www.instagram.com/vellore_vit/" target='_blank'>
                     <img src="img/ig.png" alt="instagram img" style="width:5em;">
                 </a>
+                </div>
             </div>
         </div>
     </div>
