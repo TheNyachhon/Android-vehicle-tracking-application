@@ -1,4 +1,10 @@
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drivers List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <?php 
         include('db_connection.php');
         include('supervisor page.php');
@@ -6,9 +12,9 @@
         $result=$con->query("SELECT * FROM drivers WHERE Supervisor_ID=$Supervisor_ID");
     ?>
     <body>
-    <div class="container">
-        <h1>Drivers List</h1>
-    </div>
+        <div class="container">
+            <h1>Drivers List</h1>
+        </div>
     </body>
     <?php
          if(mysqli_num_rows($result)>0){

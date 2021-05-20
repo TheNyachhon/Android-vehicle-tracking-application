@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Vehicle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <?php 
     include('db_connection.php');
     include('supervisor page.php');
@@ -30,18 +38,10 @@
     }
     echo "<br>";
 ?>
-<h1><center>Delete Vehicle</center></h1>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AV Tracking System</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+
 <body>
-    <div class="container">            
+    <div class="container">    
+        <h1>Delete Vehicle</h1>        
         <form action="delete vehicle.php" method="POST">
             <input style="width:250px;" type="text" name="Number" id="Number" placeholder="Enter Vehicle Number" required>
             <button class="btn">Delete Vehicle</button> 

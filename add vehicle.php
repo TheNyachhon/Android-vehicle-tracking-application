@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vehicle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <?php 
     include('db_connection.php');
     include('supervisor page.php');
@@ -26,18 +34,10 @@
     }
     echo "<br>";
 ?>
-<h1><center>Add Vehicle</center></h1>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AV Tracking System</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+
 <body>
-    <div class="container">            
+    <div class="container">      
+        <h1>Add Vehicle</h1>          
         <form action="add vehicle.php" method="POST">
             <input style="width:250px;" type="text" name="ID" id="ID" placeholder="Enter Vehicle number"  required>
             <input style="width:250px;" type="text" name="Brand" id="Brand" placeholder="Enter Brand" required>
