@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" href ="img/Logo.svg">
 </head>
-</html>
 <?php
     $servername = "sql6.freesqldatabase.com";
     $username = "sql6412598";
@@ -20,3 +19,5 @@
     //    echo "Connection successful <br><br>";
     }
 ?>
+</html>
+
