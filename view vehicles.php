@@ -30,9 +30,9 @@
                  echo "<td>" . $row['Brand'] . "</td>";         
                  echo "<td>" . $row['Model'] . "</td>";     
                  if($row['Status']=="Booked")     {
-                    echo "<td><p class='submitMsg'>" . $row['Status'] . "</p></td>";         
+                    echo "<td><p class='booked'>" . $row['Status'] . "</p></td>";         
                 }else{
-                    echo "<td><p class='submitMsgD'>" . $row['Status'] . "</p></td>";  
+                    echo "<td><p class='available'>" . $row['Status'] . "</p></td>";  
                 }           
                  echo "</tr>";          
              }

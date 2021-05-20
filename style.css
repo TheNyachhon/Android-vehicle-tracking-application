@@ -9,7 +9,7 @@ body{
 .nav-container{
     background: #FFFFFA;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-    height: 80px;
+    height: 9vh;/*80px*/
 }
 .wrapper{
     width: 1200px;
@@ -28,7 +28,7 @@ nav .logo{
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 2.5em;/*64px*/
     color: #002211;
 }
 .nav-items li{
@@ -57,7 +57,8 @@ nav .logo{
     margin: -0.5em 1em;
 }
 .header-container{
-    background: #008B8D url('img/BG Shape.svg');
+    background: #abe9cd url('img/BG Shape.svg');
+    /* background: #008B8D url('img/BG Shape.svg'); */
     background-repeat: no-repeat;
     background-position: right;
     background-size:contain;
@@ -72,20 +73,20 @@ header{
 }
 header h1{
     font-weight: 900;
-    font-size: 64px;
+    font-size: 3em;/*64px*/
     line-height: 75px;
     color: #002211;
     margin-bottom: 24px;
 }
 header p{
-    font-size: 35px;
+    font-size: 1.5em;/*35px*/
     width: 499px;
     line-height: 42px;
     color: #002211;
     margin-bottom:48px;
 }
 header a{
-    font-size: 24px;
+    font-size: 1.5em; /*24px*/
     color: #FFFFFA;
     text-decoration: none;
     
@@ -110,8 +111,10 @@ header a:hover{
 }
 /* Social icons*/
 .social-icons{
+    position: fixed;
     display: flex;
     align-items: center;
+    bottom:5em;
 }
 .social-icons a{
     margin:0 2em;
@@ -127,19 +130,22 @@ header .hero-image img{
     transition:300ms;
     position:relative;
     z-index: 100;
+    width: 30em;
+    height: 18em;
 }
 header .hero-image img:hover{
-    transform: rotate(-12deg);
+    transform: rotate(-15deg);
+    transition: 300ms;
 }
 header .hero-image .photo-bg{
     position: absolute;
-    width: 400px;
-    height: 400px;
-    left: 0em;
+    width: 18em;
+    height: 18em;
+    left: 6em;
     top: 0em;
     background: #2C7873;
     box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.5);
-    transform: rotate(-12deg);
+    transform: rotate(-15deg);
 }
 .footer{
     position:fixed;
@@ -202,10 +208,26 @@ form input:hover{
     font-size: 2em;
 }
 .submitMsgD{ 
-    margin-top: 2em;
+    margin-top: 2em 0;
     text-align: center;
     color: rgb(0, 255, 34);
     font-size: 2em;
+}
+.booked{ 
+    margin: 0 0;
+    text-align: center;
+    color: red;
+    font-size: 2em;
+    font-family: LEMON MILK,sans-serif;
+    font-weight:500;
+}
+.available{ 
+    margin-top: 0 0;
+    text-align: center;
+    color: rgb(0, 255, 34);
+    font-size: 2em;
+    font-family: LEMON MILK,sans-serif;
+    font-weight:500;
 }
 .options{
     font-size: 0.6em;    
@@ -214,7 +236,7 @@ form input:hover{
 table
 {
     border-style:groove;
-    border-spacing: 1.5em;
+    border-spacing: 0.5em;
     border-radius: 2em;
     border-width: 1em;
     border-color:#008B8D;
@@ -231,4 +253,12 @@ table
     text-align: center;
     border: 0.2em solid #2C7873;
     padding: 0.8em;
+}
+tr{
+    background-color: #2C7873;
+    color: #000000;
+    border-bottom: 1px solid #dddddd;
+}
+tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
