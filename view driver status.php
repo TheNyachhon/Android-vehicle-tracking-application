@@ -120,7 +120,7 @@
             console.log(data);
             latitude=parseFloat(data[2][1]);
             longitude=parseFloat(data[3][1]);
-            // alert("latitude : "+latitude+" and longitude : "+longitude);
+            alert("latitude : "+latitude+" and longitude : "+longitude);
             // alert(typeof(latitude));
             // alert(typeof(longitude));
             initMap();
