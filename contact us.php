@@ -16,25 +16,60 @@
             <ul>
             <li>
                 <p>
-                    <h1>RUJIN SHRESTHA - 19BCE2595</h1>
+                    <h2>RUJIN SHRESTHA</h2>
                 </p>
                 <br>
                 <p>
-                <a href="#"><img src="img/insta.svg" alt=""></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                <a href="#"><img src="img/fb.svg" alt=""></a>
+                <a href="https://github.com/TheNyachhon" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="https://www.instagram.com/rujin_shrestha/" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
                 </p>
             </li>
             <br><br>
             <li>
                 <p>
-                    <h1>ANHAD PREET SINGH - 19BCE0973</h1>
+                    <h2>ANHAD PREET SINGH</h2>
                 </p>
                 <br>
                 <p>
-                <a href="#"><img src="img/insta.svg" alt=""></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                <a href="#"><img src="img/fb.svg" alt=""></a>
+                <a href="" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
                 </p>
             </li>
+            <br><br>
+            <li>
+                <p>
+                    <h2>HARPAL PATEL</h2>
+                </p>
+                <br>
+                <p>
+                <a href="" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
+                </p>
+            </li>
+            <br><br>
+            <li>
+                <p>
+                    <h2>HIMNISH ISHAAN</h2>
+                </p>
+                <br>
+                <p>
+                <a href="" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
+                </p>
+            </li>
+            <br><br>
+            <li>
+                <p>
+                    <h2>ADITYA PAGARIA</h2>
+                    
+                </p>
+                <br>
+                <p>
+                <a href="" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
+                </p>
+            </li>
+            <br><br>
             </ul>
     </div>
     

@@ -114,7 +114,7 @@ header a:hover{
     position: fixed;
     display: flex;
     align-items: center;
-    bottom:5em;
+    
 }
 .social-icons a{
     margin:0 2em;

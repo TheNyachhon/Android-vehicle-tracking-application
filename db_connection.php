@@ -11,5 +11,4 @@
     //    echo "Connection successful <br><br>";
     }
 ?>
-</html>
 
