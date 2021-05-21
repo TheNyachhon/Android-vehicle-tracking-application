@@ -42,7 +42,7 @@
                 </p>
                 <br>
                 <p>
-                <a href="" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="https://github.com/harpalpatel" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                 <a href="https://www.instagram.com/harpallpatell/" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
                 </p>
             </li>
