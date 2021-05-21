@@ -43,7 +43,7 @@
                 <br>
                 <p>
                 <a href="" target='_blank'><img src="img/github.png" alt="" style="width:5em"></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                <a href="" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
+                <a href="https://www.instagram.com/harpallpatell/" target='_blank'><img src="img/ig.png" alt="" style="width:5em"></a>
                 </p>
             </li>
             <br><br>
